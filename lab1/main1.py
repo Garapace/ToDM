@@ -4,7 +4,7 @@ import math
 EPSILON = 1e-6    # заданная точность 10^-6
 DELTA = EPSILON/2 # допустимая погрешность
 iterations = 0    # количество итераций для метода
-
+    
 
 def function(x):
     """ f(x) = -x^3 + 3(1 + x)(ln(x + 1) - 1) """
@@ -20,7 +20,7 @@ def function_second_derivative(x):
     """ Вторая производная f''(x)"""
     return 3 / (x + 1) - 6 * x
 
-
+    
 def method_dichotomy(a, b):
     """ Метод деления пополам (метод бисекции | метод дихотомии) """
     global iterations
@@ -83,7 +83,7 @@ def main():
     # --- Метод деления пополам ---
     x_min1 = method_dichotomy(a, b)
     min_f1 = function(x_min1)
-    print("Минимум функции f(x) = -x^3 + 3(1+x)(ln(x+1)-1). Метод деления пополам.")
+    print("Минимум функции f(x) = -x^3 + 3(1+x)(ln(x+1)-1). Метод дихотомии.")
     print(f"Xmin = {x_min1}")
     print(f"Минимальное значение функции: {min_f1}")
     print(f"Количество итераций: {iterations}\n")
